@@ -1,6 +1,4 @@
 import 'package:clean_architecture/domain/entities/volcano.dart';
-import 'package:clean_architecture/domain/usecases/delete_volcano.dart';
-import 'package:clean_architecture/domain/usecases/get_all_volcanos.dart';
 
 abstract class VolcanoRepository {
   Future<List<Volcano>> getAllVolcanos();

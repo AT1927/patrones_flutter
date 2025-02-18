@@ -48,6 +48,20 @@ class _VolcanoListPageState extends State<VolcanoListPage> {
       difficulty:
           'Challenging - Requires good physical condition and acclimatization for the snow. About 4 hours of ascent from the last refuge.',
     ),
+    Volcano(
+      id: const Uuid().v4(),
+      name: 'Nevado del Huila',
+      height: 5364.0,
+      difficulty:
+          'Challenging - Requires good physical condition and acclimatization for the snow. About 8 hours of ascent.',
+    ),
+    Volcano(
+      id: const Uuid().v4(),
+      name: 'Cotopaxi',
+      height: 5897.0,
+      difficulty:
+          'Challenging - Requires good physical condition and acclimatization for the snow. About 5 hours of ascent from the last refuge.',
+    ),
   ];
 
   int currentIndex = 0;

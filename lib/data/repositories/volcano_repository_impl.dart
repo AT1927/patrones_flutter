@@ -1,24 +1,8 @@
 import 'package:clean_architecture/domain/entities/volcano.dart';
 import 'package:clean_architecture/domain/repositories/volcano_repository.dart';
-import 'package:clean_architecture/domain/usecases/save_volcano.dart';
+//import 'package:clean_architecture/domain/usecases/save_volcano.dart';
 
 class VolcanoRepositoryImpl implements VolcanoRepository {
-  @override
-  Future<void> deleteVolcano(String id) async {
-    await Future.delayed(const Duration(milliseconds: 500));
-    _volcanos.removeWhere((volcano) => volcano.id == id);
-  }
-
-  @override
-  Future<void> saveVolcano(Volcano volcano) async {
-    await Future.delayed(const Duration(milliseconds: 500));
-    final index = _volcanos.indexWhere((p) => p.id == volcano.id);
-    if (index >= 0) {
-      _volcanos[index] = volcano;
-    } else {
-      _volcanos.add(volcano);
-    }
-  }
   final List<Volcano> _volcanos = [];
 
   @override
@@ -38,7 +22,7 @@ class VolcanoRepositoryImpl implements VolcanoRepository {
   }
 
   @override
-  Future<void> SaveVolcano(Volcano volcano) async {
+  Future<void> saveVolcano(Volcano volcano) async {
     await Future.delayed(const Duration(milliseconds: 500));
     final index = _volcanos.indexWhere((p) => p.id == volcano.id);
     if (index >= 0) {
@@ -49,7 +33,7 @@ class VolcanoRepositoryImpl implements VolcanoRepository {
   }
 
   @override
-  Future<void> volcanoProduct(String id) async {
+  Future<void> deleteVolcano(String id) async {
     await Future.delayed(const Duration(milliseconds: 500));
     _volcanos.removeWhere((volcano) => volcano.id == id);
   }
